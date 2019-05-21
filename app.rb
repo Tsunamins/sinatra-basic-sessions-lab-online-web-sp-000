@@ -17,7 +17,7 @@ class App < Sinatra::Base
     @session = session
     session[:item] = @checkout_item
     
-    erb :index
+    
     
   end
   
