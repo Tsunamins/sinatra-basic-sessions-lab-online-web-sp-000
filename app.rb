@@ -7,10 +7,15 @@ class App < Sinatra::Base
   end 
   
   post '/checkout' do 
-    @checkout = params[:item]
+    @checkout_item = params[:item]
   
     
   end 
+  
+  get '/checkout' do 
+    session["item"] = @checkout_item
+    @session = session
+  end
   
   configure do 
     enable :sessions
