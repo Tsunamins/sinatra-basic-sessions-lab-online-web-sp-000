@@ -8,7 +8,8 @@ class App < Sinatra::Base
   
   post '/checkout' do 
     @checkout = params["item"]
-    binding.pry 
+    puts @checkout 
+    
   end 
   
   configure do 
