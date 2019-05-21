@@ -16,9 +16,7 @@ class App < Sinatra::Base
     
     @session = session
     session[:item] = @checkout_item
-    
-    
-    
+    binding.pry
   end
   
   configure do 
