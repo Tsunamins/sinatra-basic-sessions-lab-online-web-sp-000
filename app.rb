@@ -6,5 +6,9 @@ class App < Sinatra::Base
     erb :index 
   end 
   
-  
+  configure do 
+    enable :sessions
+    set :session_secret, "Graycie" #find sinatra documentaion for setting this to a secure random #number generator value and then sharing that secret via environment variables in the shell to 
+      #sinatra
+  end 
 end
