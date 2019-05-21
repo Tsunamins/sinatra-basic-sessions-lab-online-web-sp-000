@@ -12,7 +12,7 @@ class App < Sinatra::Base
     
   end 
   
-  get '/checkout' do 
+  get '/' do 
     
     @session = session
     session[:item] = @checkout_item
