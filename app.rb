@@ -8,10 +8,12 @@ class App < Sinatra::Base
   
   get '/checkout' do 
     @session = session
+    
   end
   
   post '/checkout' do 
     @session = params[:item]
+    binding.pry
   end
   
   configure do 
