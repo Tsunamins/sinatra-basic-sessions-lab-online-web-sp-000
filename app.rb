@@ -6,13 +6,15 @@ class App < Sinatra::Base
     erb :index 
   end 
   
-  get '/checkout' do 
-    @session = session
-    session["item"] = @items
-  end
+  # get '/checkout' do 
+  #   @session = session
+  #   session["item"] = @items
+  # end
   
   post '/checkout' do 
     @items = params[:item]
+    @session = session
+    session["item"] = @items
     
   end
   
