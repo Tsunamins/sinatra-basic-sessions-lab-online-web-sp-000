@@ -12,7 +12,7 @@ class App < Sinatra::Base
     
   end 
   
-  get '/' do 
+  get '/index' do 
     
     @session = session
     session[:item] = @checkout_item
